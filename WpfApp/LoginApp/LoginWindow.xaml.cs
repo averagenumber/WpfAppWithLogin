@@ -41,9 +41,9 @@ namespace WpfApp.LoginApp
         {
             string key = KeyTextBox.Text;
 
-            bool checkKey = await KeyCheck(key, keyPath);
+            //bool checkKey = await KeyCheck(key, keyPath);
             
-            if (checkKey)
+            if (true)//checkKey)
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
@@ -65,8 +65,8 @@ namespace WpfApp.LoginApp
                     fileKey = line;
                 }
 
-                bool checkKey = await KeyCheck(fileKey, keyPath);
-                if (checkKey)
+                //bool checkKey = await KeyCheck(fileKey, keyPath);
+                if (true)//checkKey)
                 {
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
@@ -102,7 +102,7 @@ namespace WpfApp.LoginApp
             string expectedMotherID = GetMHWID();
             string data = "linktokeylist";
 
-            string pasteContent = await GetPasteContent(data);
+            string pasteContent = null;//await GetPasteContent(data);
             string[] lines = pasteContent.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string line in lines)
@@ -146,7 +146,7 @@ namespace WpfApp.LoginApp
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string key = RandomString(45);
             
-            WebhookSend($"```\nUsername: {userName}\n{GetMHWID()}:{key}\n```");
+            //WebhookSend($"```\nUsername: {userName}\n{GetMHWID()}:{key}\n```");
         }
 
         private static Random random = new Random();

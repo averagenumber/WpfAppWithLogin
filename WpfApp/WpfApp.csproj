@@ -28,7 +28,7 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
-      <Page Update="TwkMontiX\Window2.xaml">
+      <Page Update="Frame\Window2.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
@@ -38,10 +38,20 @@
     <ItemGroup>
       <None Remove="Items\image\textwint.png" />
       <None Remove="Items\image\ico.png" />
-      <Resource Include="Items\image\ico.png" />
+      <Resource Include="Items\image\ico.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
       <None Remove="Items\image\close.png" />
-      <Resource Include="Items\image\close.png" />
+      <Resource Include="Items\image\close.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
       <None Remove="Items\image\main.ico" />
-      <Resource Include="Items\image\main.ico" />
+      <Resource Include="Items\image\main.ico">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Items\image\logtext.png" />
+      <Resource Include="Items\image\logtext.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 </Project>

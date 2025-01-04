@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LSQProduction")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.01")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c26184f3ab4a1fee2d8c8db975d93babb3f20d20")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+263bc4f183484ee705957b0c6a202eb91cd2db91")]
 [assembly: System.Reflection.AssemblyProductAttribute("WpfApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WpfApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.01")]
