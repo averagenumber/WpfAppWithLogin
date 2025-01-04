@@ -74,7 +74,7 @@
                        DockPanel.Dock="Top"
                        VerticalAlignment="Top" 
                        Source="/Items/image/logtext.png"  
-                       Height="50" 
+                       Height="150" 
                        Width="180" 
                        Margin="0 5 0 1"
                        MouseLeftButtonUp="MainIcon_MouseLeftButtonUp"

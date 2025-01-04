@@ -27,7 +27,7 @@
                 
                 <Image VerticalAlignment="Top" 
                        Source="/Items/image/logtext.png"  
-                       Height="120" 
+                       Height="150" 
                        Width="200" 
                        Margin="0 5 0 0"/>
                 
