@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp.CustomMessageBox.Show"
+        Icon="/Items/image/ico.png"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Custom Message" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="{DynamicResource BackgroundColor}">
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+<Setter Property="Background" Value="{DynamicResource ButtonBackgroundColor}"></Setter>
+            <Setter Property="FontFamily" Value="Khmer"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Background" Value="{DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderColor}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextForegroundColor}"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="270" BlurRadius="8" ShadowDepth="4" Opacity="0.4"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{DynamicResource ButtonBorderColor}" 
+                                BorderThickness="1"
+                                CornerRadius="20"
+                                UseLayoutRounding="True">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="MessageText"
+                       Text="This is your message! If the text is too long, it will wrap to the next line."
+                       FontSize="16" HorizontalAlignment="Center"
+                       Foreground="{DynamicResource TextForegroundColor}"
+                       TextAlignment="Center" Margin="20"
+                       TextWrapping="Wrap" MaxWidth="360"/>
+            <Button Content="OK"
+                    Width="120" Height="35"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Click="OkButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <Company>LSQProduction</Company>
+        <AssemblyVersion>0.01</AssemblyVersion>
+        <ApplicationIcon>Items\image\main.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+      <PackageReference Include="Google.Apis.Drive.v3" Version="1.68.0.3601" />
+      <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Modules\CustomMessageBox.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Modules\PopUp.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="TwkMontiX\Window2.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Items\image\textwint.png" />
+      <None Remove="Items\image\ico.png" />
+      <Resource Include="Items\image\ico.png" />
+      <None Remove="Items\image\close.png" />
+      <Resource Include="Items\image\close.png" />
+      <None Remove="Items\image\main.ico" />
+      <Resource Include="Items\image\main.ico" />
+    </ItemGroup>
+</Project>
